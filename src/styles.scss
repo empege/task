@@ -1,0 +1,301 @@
+// Min break point
+$break-s: 576px;
+$break-m: 768px;
+$break-l: 992px;
+$break-xl: 1440px;
+
+// Colors
+$color-outer-space: #202624;
+$color-friar-gray: #82827d;
+$color-moon-mist: #dad9cb;
+$color-pampas: #f0efe5;
+$gradient-sea-green: linear-gradient(83deg, #079188 13.2%, #438006 81.75%);
+
+// Separation sizes (padding / margin)
+$vps-xs: 8px; 
+$vps-l: 16px;
+$vps-xl: 24px;
+
+$vps-xxl-xs: 56px;
+$vps-xxl-l: 64px;
+$vps-xxl-xl: 80px;
+
+$vps: $vps-xs;
+$vps-xxl: $vps-xxl-xs;
+
+// Steta sto ovako ne moze
+// @media only screen and (min-width: $break-xl) {
+//   $vps: $vps-xl;
+// }
+// @media only screen and (min-width: $break-l) {
+//   $vps: $vps-l;
+// }
+
+// Displays
+.show-grid { display: grid !important;}
+.show-block { display: block !important;}
+.show-flex { display: flex !important;}
+
+// General
+* { box-sizing: border-box;}
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+a, h1, h2, h3, h4, h5, h6, ul, li, p {padding: 0; margin: 0}
+a {text-decoration: none;}
+
+.product-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.product-wrapper * {
+  // border-radius: 3px;
+}
+
+.product {
+  padding-bottom: $vps-xxl;
+}
+
+.image-wrapper {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: $vps;
+}
+
+.add-to-cart-wrapper {
+  display: flex;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  background-color: $color-pampas;
+  h1 {margin-left: 10px;}
+}
+.image-wrapper:hover .add-to-cart-wrapper{
+  display: flex;
+  animation: fadeIn .5s forwards;
+}
+@keyframes fadeIn {
+  100% {opacity: 1}
+}
+
+.sizes-wrapper {
+  display: none;
+  background: white;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  // display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: $vps-l - 8px $vps-xs;
+  cursor: default;
+  max-height: 147px;
+  overflow-y: scroll;
+  
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
+.size-item {
+  border: 3px solid $color-moon-mist;
+  border-image-slice: 1;
+  padding: 10px;
+  margin: $vps-xs;
+  cursor: pointer;
+  &:hover {
+    border-image-source: $gradient-sea-green;
+  }
+}
+
+.description-wrapper {
+  padding-right: $vps;
+  h1 {
+    margin-bottom: 5px;
+    // ne znam koji je ovde tacno margin, ne pise
+  }
+  h5 {
+    margin-bottom: $vps;
+    font-size: 1.3em;
+    font-weight: normal;
+  }
+  p {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    cursor: pointer;
+    margin-bottom: $vps;
+  }
+  a {
+    display: inline-block;
+  }
+}
+.remove-ellipsis {
+  white-space: break-spaces !important;
+  overflow: visible !important;
+}
+
+.favourites-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $vps;
+}
+.essentials {
+  color: $color-friar-gray;
+  border: 2px solid $color-moon-mist;
+  padding: 5px;
+}
+.heart-icon-wrapper {
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  img {
+    zoom: 1.3;
+  }
+  &:hover {
+    background: $color-moon-mist;
+  }
+}
+.added-to-favourites {background: $color-moon-mist;}
+
+.radio-group-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+.radio-wrapper {
+  display: flex;
+  position: relative;
+  padding-right: 50px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+.radio {
+  position: absolute;
+  opacity: 0;
+}
+.background-green {background: #526f6c;}
+.background-blue { background: #20284f;}
+.background-pale { background: #69708f;}
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  padding: 12px;
+  border: 3px solid white;
+}
+/* On mouse-over, add a grey background color */
+.radio-wrapper:hover .radio ~ .checkmark {
+  box-shadow: 0 0 1px 3px $color-friar-gray;
+}
+/* When the radio button is checked, add a blue background */
+.radio-wrapper input:checked ~ .checkmark {
+  box-shadow: 0 0 1px 3px $color-friar-gray;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.radio-wrapper .radio:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: $break-l) {
+  $vps: $vps-l;
+  $vps-xxl: $vps-xxl-l;
+  .product {
+    padding-bottom: $vps-xxl;
+  }
+  .image-wrapper {
+    margin-bottom: $vps;
+  }
+  .add-to-cart-wrapper {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: #efeddc;
+    h1 {margin-left: 10px;}
+  }
+  .description-wrapper {
+    padding-right: $vps;
+    h5 {
+      margin-bottom: $vps;
+    }
+    p {
+      margin-bottom: $vps;
+    }
+  }
+  .favourites-wrapper {
+    margin-bottom: $vps;
+  }
+}
+@media only screen and (min-width: $break-xl) {
+  $vps: $vps-xl;
+  $vps-xxl: $vps-xxl-xl;
+  .product {
+    padding-bottom: $vps-xxl;
+  }
+  .image-wrapper {
+    margin-bottom: $vps;
+  }
+  .description-wrapper {
+    padding-right: $vps;
+    h5 {
+      margin-bottom: $vps;
+    }
+    p {
+      margin-bottom: $vps;
+    }
+  }
+  .favourites-wrapper {
+    margin-bottom: $vps;
+  }
+}
