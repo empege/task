@@ -6,7 +6,7 @@ const productsData = [
   },
   {
     id: 1,
-    images: ['product-example-5.jpg', 'product-example-1.jpg', 'product-example-12.jpg']
+    images: ['product-example-5.jpg', 'product-example-1.jpg', 'product-example-12.jpg', 'product-example-5.jpg', 'product-example-1.jpg', 'product-example-12.jpg']
   },
   {
     id: 2,
