@@ -24,16 +24,11 @@ const radioForms = document.querySelectorAll('.radio-group-wrapper');
 const radioBtns = document.querySelectorAll('.radio');
 const hearts = document.querySelectorAll('.heart-icon-wrapper');
 
-
-
-
 products.forEach(current => current.addEventListener('click', (e) => toggleSizes(e)))
 allSizeItems.forEach(current => current.addEventListener('click', (e) => addToCart(e)))
 descriptions.forEach(current => current.addEventListener('click', (e) => toggleDescription(e)))
 radioForms.forEach(current => current.addEventListener('change', () => chooseImage()));
 hearts.forEach(heart => heart.addEventListener('click', (e) => addToFavourites(e)));
-
-
 
 /* FUNCTIONS */
 
@@ -48,8 +43,8 @@ const toggleSizes = (e) => {
   allSizesDivs.forEach(current => {
     current !== sizesDiv && current.classList.remove('show-flex')
   });
-  // show sizes div of current element if hidden
-  // or unless user is clicking on white space between the sizes.
+  // show sizes div of current element if hidden, hide if shown
+  // if user is clicking on white space between the sizes don't hide.
   sizesDiv.className.includes('show-flex') && !e.target.className.includes('sizes-wrapper') ? sizesDiv.classList.remove('show-flex') : sizesDiv.classList.add('show-flex');
   console.log('Sizes Toggled');
 
@@ -65,15 +60,12 @@ const addToCart = (e) => {
   console.log('Item added to Cart (Size was chosen)');
 
 }
-
 // show more / less of description on click
 const toggleDescription = (e) => {
   const clicked = e.target;
   clicked.className.includes('remove-ellipsis') ? clicked.classList.remove('remove-ellipsis') : clicked.classList.add('remove-ellipsis');
   console.log('Toggling description');
-
 }
-
 // radio buttons change image
 const chooseImage = () => {
   radioForms.forEach((form, formIndex) => {
@@ -95,7 +87,6 @@ const chooseImage = () => {
     })
   })
   console.log('Different Image Chosen');
-
 }
 chooseImage();
 
@@ -112,8 +103,8 @@ const addToFavourites = (e) => {
 
 
 //Pitanja!:
-//1) da li je uopste normalno gadjati elemente tako preko roditelja i siblinga itd jer mi izgleda veoma nestabilno, ali ne vidim drugi nacin jer u reactu npr bi verovatno bilo mnogo drugacije i menjao bi se state unutar komponente, ne bih morao tako da trazim i gadjam vrednosti? Ili jos ne znam react dovoljno i samo mislim da je tako?
-//Ako su ovo neke npr komponente onda ce uvek biti iste strukture i ok je da gadjam roditelje itd?
+//1) da li je uopste normalno gadjati elemente tako preko roditelja i siblinga itd jer mi izgleda veoma nestabilno, ali ne vidim drugi nacin jer u reactu npr bi verovatno bilo mnogo drugacije i menjao bi se state unutar komponente (ili neki generalni veliki state objekat), ne bih morao tako da trazim i gadjam vrednosti prema roditeljima i elementima? Ili jos ne znam react dovoljno i samo mislim da je tako?
+//Ako su ovo neke npr samostalne komponente onda ce uvek biti iste strukture i ok je da gadjam roditelje, siblinge itd?
 
 // stvari za zapamtiti!:
 //JS
