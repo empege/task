@@ -1,0 +1,29 @@
+// Min break point
+$break-s: 576px;
+$break-m: 768px;
+$break-l: 992px;
+$break-xl: 1440px;
+
+// Colors
+$color-outer-space: #202624;
+$color-friar-gray: #82827d;
+$color-moon-mist: #dad9cb;
+$color-pampas: #f0efe5;
+$gradient-sea-green: linear-gradient(83deg, #079188 13.2%, #438006 81.75%);
+
+// Separation sizes (padding / margin)
+$vps-gap-xs: 8px; 
+$vps-gap-l: 16px;
+$vps-gap-xl: 24px;
+
+$vps-gap-xxl-xs: 56px;
+$vps-gap-xxl-l: 64px;
+$vps-gap-xxl-xl: 80px;
+
+$vps-gap: $vps-gap-xs;
+$vps-gap-xxl: $vps-gap-xxl-xs;
+
+// Animations
+@keyframes fadeIn {
+  100% {opacity: 1}
+}

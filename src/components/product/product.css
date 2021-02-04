@@ -10,55 +10,6 @@
   }
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  min-height: 100vh;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-a, h1, h2, h3, h4, h5, h6, ul, li, p {
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-.display-grid {
-  display: -ms-grid !important;
-  display: grid !important;
-}
-
-.display-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.display-block {
-  display: block !important;
-}
-
-.display-none {
-  display: none !important;
-}
-
-@keyframes fadeIn {
-  100% {
-    opacity: 1;
-  }
-}
-
 .product__color-1 {
   background: white;
   border-color: white;

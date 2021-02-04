@@ -10,160 +10,122 @@
 
 <body>
 
-  <section class="product-wrapper">
+  <section class="display-grid display-grid--products">
+
     <article class="product">
-      <div class="image-wrapper">
-        <img width="100%" src="assets/images/product-example-1.jpg" alt="image1">
-        <div class="add-to-cart-wrapper">
-          <img src="assets/icons/ico-bag.svg" alt="bag icon">
-          <h1>Add to Cart</h1>
+      <div class="product__inner product__inner--image js-product-image-wrapper">
+        <img width="100%" class="product__image" src="assets/images/product-example-1.jpg" alt="image1">
+        <div class="product__add-to-cart">
+          <img class="product__add-to-cart-icon" src="assets/icons/ico-bag.svg" alt="bag icon">
+          <h1 class="product__add-to-cart-text">Add to Cart</h1>
         </div>
-        <div class="sizes-wrapper">
-          <div class="size-item">28 / 39 EU</div>
-          <div class="size-item">40 EU</div>
-          <div class="size-item">41 EU</div>
-          <div class="size-item">42 EU</div>
-          <div class="size-item">43 EUaa</div>
-          <div class="size-item">44 EU</div>
-          <div class="size-item">45 EU</div>
-          <div class="size-item">46 EU</div>
-          <div class="size-item"><img src="assets/icons/ico-info.svg" alt=""></div>
+        <div class="product__sizes display-none js-product-sizes-wrapper">
+          <div class="product__sizes-item js-product-size">28 / 39 EU</div>
+          <div class="product__sizes-item js-product-size">40 EU</div>
+          <div class="product__sizes-item js-product-size">41 EU</div>
+          <div class="product__sizes-item js-product-size">42 EU</div>
+          <div class="product__sizes-item js-product-size">43 EUaa</div>
+          <div class="product__sizes-item js-product-size">44 EU</div>
+          <div class="product__sizes-item js-product-size">45 EU</div>
+          <div class="product__sizes-item js-product-size">46 EU</div>
+          <div class="product__sizes-item js-product-size sizes__item--info-icon"><img src="assets/icons/ico-info.svg" alt=""></div>
         </div>
       </div>
-      <div class="description-wrapper">
-        <div class="favourites-wrapper">
-          <span class="essentials">ESSENTIALS</span>
-          <div class="heart-icon-wrapper">
-            <img src="assets/icons/ico-heart.svg" alt="heart icon">
+      <div class="product__inner product__inner--description">
+        <div class="product__add-to-favourites">
+          <span class="product__add-to-favourites-text">ESSENTIALS</span>
+          <div class="product__inner product__inner--add-to-favourites js-product-inner-heart-button">
+            <img class="product__add-to-favourites-icon js-product-heart-icon" src="assets/icons/ico-heart.svg" alt="heart icon">
           </div>
         </div>
-        <h1>Boss</h1>
-        <p class="description">Some desc here my friend ok? yeees some sca here my friend ok? yeees</p>
-        <h5>CHF 192.80</h5>
-        <form class="radio-group-wrapper product-1">
-          <!-- Ovo uradi ponovo sa obicnim divovima -->
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio" checked>
-            <span class="checkmark background-blue"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-pale"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-green"></span>
-          </label>
-        </form>
+        <h1 class="product__title">Boss</h1>
+        <p class="product__description js-product-description">Some desc my friend ok? yeees some sca here my friend ok? yeees</p>
+        <div class="product__price">CHF 192.80</div>
+
+        <div class="product__radio-group js-product-radio-group-wrapper"></div>
+
       </div>
     </article>
 
     <article class="product">
-      <div class="image-wrapper">
-        <img width="100%" src="assets/images/product-example-1.jpg" alt="image1">
-        <div class="add-to-cart-wrapper">
-          <img src="assets/icons/ico-bag.svg" alt="bag icon">
-          <h1>Add to Cart</h1>
+      <div class="product__inner product__inner--image js-product-image-wrapper">
+        <img width="100%" class="product__image" src="assets/images/product-example-1.jpg" alt="image1">
+        <div class="product__add-to-cart">
+          <img class="product__add-to-cart-icon" src="assets/icons/ico-bag.svg" alt="bag icon">
+          <h1 class="product__add-to-cart-text">Add to Cart</h1>
         </div>
-        <div class="sizes-wrapper">
-          <div class="size-item">39 EU</div>
-          <div class="size-item">40 EU</div>
-          <div class="size-item">41 EU</div>
-          <div class="size-item">42 EU</div>
-          <div class="size-item">43 EU</div>
-          <div class="size-item">44 EU</div>
-          <div class="size-item">45 EU</div>
-          <div class="size-item">46 EU</div>
-          <div class="size-item"><img src="assets/icons/ico-info.svg" alt=""></div>
+        <div class="product__sizes display-none js-product-sizes-wrapper">
+          <div class="product__sizes-item js-product-size">28 / 39 EU</div>
+          <div class="product__sizes-item js-product-size">40 EU</div>
+          <div class="product__sizes-item js-product-size">41 EU</div>
+          <div class="product__sizes-item js-product-size">42 EU</div>
+          <div class="product__sizes-item js-product-size">43 EUaa</div>
+          <div class="product__sizes-item js-product-size">44 EU</div>
+          <div class="product__sizes-item js-product-size">45 EU</div>
+          <div class="product__sizes-item js-product-size">46 EU</div>
+          <div class="product__sizes-item js-product-size sizes__item--info-icon"><img src="assets/icons/ico-info.svg" alt=""></div>
         </div>
       </div>
-      <div class="description-wrapper">
-        <div class="favourites-wrapper">
-          <span class="essentials">ESSENTIALS</span>
-          <div class="heart-icon-wrapper">
-            <img src="assets/icons/ico-heart.svg" alt="heart icon">
+      <div class="product__inner product__inner--description">
+        <div class="product__add-to-favourites">
+          <span class="product__add-to-favourites-text">ESSENTIALS</span>
+          <div class="product__inner product__inner--add-to-favourites js-product-inner-heart-button">
+            <img class="product__add-to-favourites-icon js-product-heart-icon" src="assets/icons/ico-heart.svg" alt="heart icon">
           </div>
         </div>
-        <h1>Boss</h1>
-        <p class="description">Some desc here my friend ok? yeees some sca here my friend ok? yeees</p>
-        <h5>CHF 192.80</h5>
-        <form class="radio-group-wrapper product-1">
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio" checked>
-            <span class="checkmark background-blue"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-pale"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-green"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-blue"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-pale"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-green"></span>
-          </label>
-        </form>
+        <h1 class="product__title">Boss</h1>
+        <p class="product__description js-product-description">Some desc here my friend ok? yeees some sca here my</p>
+        <div class="product__price">CHF 192.80</div>
+
+        <div class="product__radio-group js-product-radio-group-wrapper"></div>
+
       </div>
     </article>
     <article class="product">
-      <div class="image-wrapper">
-        <img width="100%" src="assets/images/product-example-1.jpg" alt="image1">
-        <div class="add-to-cart-wrapper">
-          <img src="assets/icons/ico-bag.svg" alt="bag icon">
-          <h1>Add to Cart</h1>
+      <div class="product__inner product__inner--image js-product-image-wrapper">
+        <img width="100%" class="product__image" src="assets/images/product-example-1.jpg" alt="image1">
+        <div class="product__add-to-cart">
+          <img class="product__add-to-cart-icon" src="assets/icons/ico-bag.svg" alt="bag icon">
+          <h1 class="product__add-to-cart-text">Add to Cart</h1>
         </div>
-        <div class="sizes-wrapper">
-          <div class="size-item">39 EU</div>
-          <div class="size-item">40 EU</div>
-          <div class="size-item">41 EU</div>
-          <div class="size-item">42 EU</div>
-          <div class="size-item">43 EU</div>
-          <div class="size-item">44 EU</div>
-          <div class="size-item">45 EU</div>
-          <div class="size-item">46 EU</div>
-          <div class="size-item"><img src="assets/icons/ico-info.svg" alt=""></div>
+        <div class="product__sizes display-none js-product-sizes-wrapper">
+          <div class="product__sizes-item js-product-size">28 / 39 EU</div>
+          <div class="product__sizes-item js-product-size">40 EU</div>
+          <div class="product__sizes-item js-product-size">41 EU</div>
+          <div class="product__sizes-item js-product-size">42 EU</div>
+          <div class="product__sizes-item js-product-size">43 EUaa</div>
+          <div class="product__sizes-item js-product-size">44 EU</div>
+          <div class="product__sizes-item js-product-size">45 EU</div>
+          <div class="product__sizes-item js-product-size">46 EU</div>
+          <div class="product__sizes-item js-product-size sizes__item--info-icon"><img src="assets/icons/ico-info.svg" alt=""></div>
         </div>
       </div>
-      <div class="description-wrapper">
-        <div class="favourites-wrapper">
-          <span class="essentials">ESSENTIALS</span>
-          <div class="heart-icon-wrapper">
-            <img src="assets/icons/ico-heart.svg" alt="heart icon">
+      <div class="product__inner product__inner--description">
+        <div class="product__add-to-favourites">
+          <span class="product__add-to-favourites-text">ESSENTIALS</span>
+          <div class="product__inner product__inner--add-to-favourites js-product-inner-heart-button">
+            <img class="product__add-to-favourites-icon js-product-heart-icon" src="assets/icons/ico-heart.svg" alt="heart icon">
           </div>
         </div>
-        <h1>Boss</h1>
-        <p class="description">Some desc here my friend ok? yeees some sca here my friend ok? yeees</p>
-        <h5>CHF 192.80</h5>
-        <form class="radio-group-wrapper product-1">
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio" checked>
-            <span class="checkmark background-blue"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-pale"></span>
-          </label>
-          <label class="radio-wrapper">
-            <input type="radio" name="item-1-color" class="radio">
-            <span class="checkmark background-green"></span>
-          </label>
-        </form>
+        <h1 class="product__title">Boss</h1>
+        <p class="product__description js-product-description">asad alk djaslk djalsk j askjda lskdj ksj a a ads ladjklak sjl a;sldk asdklja skldj alskdj alksj alsj laks alaj sldaj lka la akls</p>
+        <div class="product__price">CHF 192.80</div>
+
+        <div class="product__radio-group js-product-radio-group-wrapper"></div>
+
       </div>
     </article>
+
+
+
+
+
+
+
   </section>
 
 
-  <script src="src/index.js"></script>
+  <script type="module" src="src/index.js"></script>
 </body>
 
 </html>
